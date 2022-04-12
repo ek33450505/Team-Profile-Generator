@@ -6,8 +6,6 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
-const employeeArray = [];
-
 // manager
 const addManager = () => {
     return inquirer.prompt([
@@ -73,6 +71,8 @@ const addManager = () => {
     })
 };
 
+const employeeArray = [];
+
 const addEmployee = () => {
     //added from module 9 promptProject
     console.log(`
@@ -81,9 +81,7 @@ const addEmployee = () => {
     =================
     `);
 
-      // If there's no 'projects' array property, create one
- 
-    return inquirer.prompt([
+        return inquirer.prompt([
         {
             type: 'list',
             name: 'role',
@@ -136,7 +134,7 @@ const addEmployee = () => {
               // http://adilapapaya.com/docs/inquirer/ used this site to figure out how to ask the question or not ask it
               when: (input) => input.role === 'Engineer',
               validate: githubInput => {
-                if (githubinput) {
+                if (githubInput) {
                   return true;
                 } else {
                   console.log('You need to enter a valid GitHub username!');
@@ -165,7 +163,32 @@ const addEmployee = () => {
                 message: 'Would you like to add another employee?',
                 default: false
             }
-        ]);
+        ])
+        
+        .then(employeeData => {
+
+          let { name, id, email, role, github, school, confirmAddEmployee } = employeeData;
+          let employee;
+
+          if (role === 'Engineer') {
+            employee = new Engineer (name, id, email, github);
+
+            console.log(employee);
+
+          } else if (role === 'Intern') {
+            employee = new Intern (name, id, email, school);
+
+            console.log(employee);
+          }
+
+          employeeArray.push(employee)
+
+          if (confirmAddEmployee) {
+            return addEmployee(employeeArray);
+          } else {
+            return employeeArray;
+          }
+        })
       };
 
 // call to begin prompts
