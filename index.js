@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
-const generatePage = require('./src/page-template');
-const { writeFile, copyFile } = require('./src/generate-site');
+const generateSite = require('./src/generateSite');
+const fs = require('fs');
 
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
@@ -191,11 +191,29 @@ const addEmployee = () => {
         })
       };
 
+const writeFile = data => {
+  fs.writeFile('./dist/index.html', data, err => {
+    if (err) {
+      console.log(err);
+      return;
+    } else {
+      console.log('You have sucessfully assembled your team! Please check out your work in index.html')
+    }
+ })
+};
+
 // call to begin prompts
 addManager()
 .then(addEmployee)
-
-
+.then(employeeArray => {
+  return generateSite(employeeArray);
+})
+.then(pageHTML => {
+  return writeFile(pageHTML);
+})
+.catch(err => {
+  console.log(err);
+});
 
 
 
