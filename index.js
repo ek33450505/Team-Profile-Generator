@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const generateSite = require('./src/generateSite');
+const generatePage = require('./src/page-template');
 const fs = require('fs');
 
 const Manager = require('./lib/Manager');
@@ -202,14 +202,39 @@ const writeFile = data => {
  })
 };
 
+// copying css file
+const copyFile = () => {
+  return new Promise((resolve, reject) => {
+    fs.copyFile('./src/style.css', './dist/style.css', err => {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      resolve({
+        ok: true,
+        message: 'Stylesheet created!'
+      });
+    });
+  });
+};
+
+
 // call to begin prompts
 addManager()
 .then(addEmployee)
 .then(employeeArray => {
-  return generateSite(employeeArray);
+  return generatePage(employeeArray);
 })
 .then(pageHTML => {
   return writeFile(pageHTML);
+})
+.then(writeFileResponse => {
+  console.log(writeFileResponse);
+  return copyFile();
+})
+.then(copyFileResponse => {
+  console.log(copyFileResponse);
 })
 .catch(err => {
   console.log(err);
