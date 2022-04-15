@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const generatePage = require('./src/page-template');
+const generateEmployees= require('./src/page-template');
 const fs = require('fs');
 
 const Manager = require('./lib/Manager');
@@ -224,7 +224,7 @@ const copyFile = () => {
 addManager()
 .then(addEmployee)
 .then(employeeArray => {
-  return generatePage(employeeArray);
+  return generateEmployees(employeeArray);
 })
 .then(pageHTML => {
   return writeFile(pageHTML);
