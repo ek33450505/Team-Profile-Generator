@@ -29,6 +29,7 @@ THEN I exit the application, and the HTML is generated
   - [Installation](#installation)
   - [Visualization](#visualization)
   - [Contributors](#contributors)
+  - [Testing](#testing)
   - [Contact](#contact)
 
 ## Installation
@@ -43,6 +44,9 @@ npm install jest
 
 ## Visualization
 
+Please use this link to view a video demonstration of the application working in my terminal:
+
+
 ![Screenshot 2022-04-15 204850](https://user-images.githubusercontent.com/97137083/163655424-829254e5-d59e-40ab-87ec-93516456c1ef.png)
 
 ### Example of Generated HTML
@@ -54,6 +58,12 @@ https://github.com/ek33450505/Team-Profile-Generator/blob/main/dist/index.html
 http://adilapapaya.com/docs/inquirer
 
 https://getbootstrap.com/
+
+
+## Testing
+
+Please see [Visualization](#visualization) for a video of the project working on my command line. This test shows how the application generates a new index.html file with user input and utilizes a default CSS file.
+
 
 ## Contact
 
