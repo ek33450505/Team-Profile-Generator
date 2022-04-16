@@ -39,6 +39,10 @@ To use this program please ensure you have node.js installed on your computer. T
 
 ![Screenshot 2022-04-15 204850](https://user-images.githubusercontent.com/97137083/163655424-829254e5-d59e-40ab-87ec-93516456c1ef.png)
 
+### Example of Generated HTML
+
+https://github.com/ek33450505/Team-Profile-Generator/blob/main/dist/index.html
+
 ## Contributors
 
 http://adilapapaya.com/docs/inquirer
@@ -48,7 +52,10 @@ https://getbootstrap.com/
 ## Contact
 
 Edward Kubiak
+
 ek33450505@gmail.com
+
+https://github.com/ek33450505
 
 
 
