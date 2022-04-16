@@ -38,6 +38,7 @@ To use this program please ensure you have node.js installed on your computer. T
 Application uses both the Inquirer.js and Jest.js packages. These can be installed by using the following commands:
 
 npm install inquirer
+
 npm install jest
 
 ## Visualization
