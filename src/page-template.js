@@ -1,6 +1,6 @@
 const generateManager = function (manager) {
     return `
-    <div class="col-4">
+    <div class="col-3">
         <div class="card h-100">
             <div class="card-header">
                 <h3>${manager.name}</h3>
@@ -19,7 +19,7 @@ const generateManager = function (manager) {
 
 const generateEngineer = function (engineer) {
     return `
-    <div class="col-4">
+    <div class="col-3">
         <div class="card h-100">
             <div class="card-header">
                 <h3>${engineer.name}</h3>
@@ -37,7 +37,7 @@ const generateEngineer = function (engineer) {
 
 const generateIntern = function (intern) {
     return `
-    <div class="col-4">
+    <div class="col-3">
         <div class="card h-100">
             <div class="card-header">
                 <h3>${intern.name}</h3>
@@ -54,7 +54,7 @@ const generateIntern = function (intern) {
     `;
 };
 
-//need to generate page information here and emplotee cards
+// need to generate page information here and push to employee cards
 generateNewTeam = (data) => {
 
     cardArray = [];
@@ -98,14 +98,14 @@ const generateMyTeam = function(employeeCards) {
         <header>
             <nav class="navbar navbar-dark bg-dark w-100">
                 <div class="container-fluid">
-                    <span class="navbar-brand mb-0 h1">My Team</span>
+                    <span class="navbar-brand mb-0 h1 w-100 text-center">My Team</span>
                 </div>
             </nav>
         </header>
 
         <main>
             <div class="container">
-                <div class="row justify-content-center" id ="team-cards">
+                <div class="row justify-content-center" id="team-cards">
                     ${employeeCards}
                 </div>
             </div>

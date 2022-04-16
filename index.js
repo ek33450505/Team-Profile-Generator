@@ -6,7 +6,6 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
-// manager
 const addManager = () => {
     return inquirer.prompt([
         {
@@ -67,7 +66,7 @@ const addManager = () => {
         const manager = new Manager (name, id, email, officeNumber);
 
         employeeArray.push(manager); // pushes manager data to Array
-        console.log(manager); // remove after finializing questions
+        // console.log(manager); // remove after finializing questions
     })
 };
 
@@ -173,12 +172,12 @@ const addEmployee = () => {
           if (role === 'Engineer') {
             employee = new Engineer (name, id, email, github);
 
-            console.log(employee);
+            // console.log(employee);
 
           } else if (role === 'Intern') {
             employee = new Intern (name, id, email, school);
 
-            console.log(employee);
+            // console.log(employee);
           }
 
           employeeArray.push(employee)
@@ -212,8 +211,8 @@ const copyFile = () => {
       }
 
       resolve({
-        ok: true,
-        message: 'Stylesheet created!'
+        ok: true
+        // message: 'Stylesheet created!'
       });
     });
   });

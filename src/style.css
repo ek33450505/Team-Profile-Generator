@@ -1,0 +1,33 @@
+body {
+    background-color: whitesmoke;
+}
+
+.container-fluid {
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-size: 50px;
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card-header {
+    background-color: lightblue;
+}
+
+.card-header h3 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card-header h4 {
+    text-align: center;
+}
+
+.card-body p {
+    font-weight: bolder;
+}
