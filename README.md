@@ -23,3 +23,32 @@ WHEN I select the intern option
 THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
+
+ ## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Visualization](#visualization)
+  - [Contributors](#contributors)
+  - [Contact](#contact)
+
+## Installation
+
+To use this program please ensure you have node.js installed on your computer. To install proper packages, in your command line, type * npm install *. In order for questions to be prompted in your command line, type * node index.js *.
+
+## Visualization
+
+![Screenshot 2022-04-15 204850](https://user-images.githubusercontent.com/97137083/163655424-829254e5-d59e-40ab-87ec-93516456c1ef.png)
+
+## Contributors
+
+http://adilapapaya.com/docs/inquirer
+
+https://getbootstrap.com/
+
+## Contact
+
+Edward Kubiak
+ek33450505@gmail.com
+
+
+
