@@ -35,6 +35,11 @@ THEN I exit the application, and the HTML is generated
 
 To use this program please ensure you have node.js installed on your computer. To install proper packages, in your command line, type * npm install *. In order for questions to be prompted in your command line, type * node index.js *.
 
+Application uses both the Inquirer.js and Jest.js packages. These can be installed by using the following commands:
+
+npm install inquirer
+npm install jest
+
 ## Visualization
 
 ![Screenshot 2022-04-15 204850](https://user-images.githubusercontent.com/97137083/163655424-829254e5-d59e-40ab-87ec-93516456c1ef.png)
